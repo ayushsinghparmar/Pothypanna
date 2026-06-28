@@ -88,3 +88,56 @@ booksGrid.innerHTML+=`
 }
 
 displayBooks(books);
+
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+const filterButtons = document.querySelectorAll(".genre-filter button");
+
+function filterBooks() {
+
+const keyword = searchInput.value.toLowerCase();
+
+const activeCategory =
+document.querySelector(".genre-filter .active").dataset.category;
+
+const filtered = books.filter(book => {
+
+const matchesSearch =
+
+book.title.toLowerCase().includes(keyword) ||
+
+book.author.toLowerCase().includes(keyword) ||
+
+book.genre.toLowerCase().includes(keyword);
+
+const matchesCategory =
+
+activeCategory === "All" ||
+
+book.genre === activeCategory;
+
+return matchesSearch && matchesCategory;
+
+});
+
+displayBooks(filtered);
+
+}
+
+searchInput.addEventListener("input", filterBooks);
+
+searchButton.addEventListener("click", filterBooks);
+
+filterButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+filterButtons.forEach(btn=>btn.classList.remove("active"));
+
+button.classList.add("active");
+
+filterBooks();
+
+});
+
+});
