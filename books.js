@@ -1,19 +1,47 @@
 const books = [
 
 {
+id:1,
+
 title:"Atomic Habits",
+
 author:"James Clear",
+
 genre:"Self-help",
+
 description:"Tiny changes that lead to remarkable results.",
+
 cover:"https://placehold.co/300x450?text=Atomic+Habits",
 
+rating:"4.8",
+
+reviews:"24500",
+
+language:"English",
+
+year:"2018",
+
+featured:true,
+
+bestseller:true,
+
+tags:[
+"Habits",
+"Productivity",
+"Self Growth"
+],
+
 amazon:"#",
+
 kindle:"#",
+
 pothi:"#",
+
 website:"#"
 },
 
 {
+id:2,
 title:"The Alchemist",
 author:"Paulo Coelho",
 genre:"Philosophy",
@@ -27,6 +55,7 @@ website:"#"
 },
 
 {
+id:3,
 title:"Think and Grow Rich",
 author:"Napoleon Hill",
 genre:"Business",
