@@ -37,7 +37,7 @@ z-index:9999;
 }
 
 .loader-logo{
-width:120px;
+width:150px;
 animation:float 2s infinite ease-in-out;
 }
 
@@ -97,7 +97,7 @@ font-size:24px;
 }
 
 .logo img{
-width:55px;
+width:70px;
 }
 
 nav ul{
