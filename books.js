@@ -51,7 +51,7 @@ list.forEach(book=>{
 
 booksGrid.innerHTML+=`
 
-<div class="book-card">
+<div class="book-card" onclick="location.href='book.html?id=${book.id}'">
 
 <img src="${book.cover}" alt="${book.title}">
 
