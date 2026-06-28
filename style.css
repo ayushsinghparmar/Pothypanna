@@ -475,3 +475,43 @@ font-size:30px;
 cursor:pointer;
 
 }
+.footer{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.footer h2{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.footer p{
+margin:5px 0;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:35px;
+margin:25px 0;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:#111;
+}
+
+.copyright{
+margin-top:20px;
+font-size:14px;
+opacity:.8;
+}
