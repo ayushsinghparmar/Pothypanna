@@ -127,10 +127,27 @@ list-style:none;
 gap:30px;
 }
 
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
 nav li{
-cursor:pointer;
+list-style:none;
+}
+
+nav li a{
+text-decoration:none;
+color:#111;
 font-weight:600;
 transition:.3s;
+display:block;
+padding:6px 0;
+}
+
+nav li a:hover{
+color:#fff;
 }
 
 nav li:hover{
