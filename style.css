@@ -310,3 +310,23 @@ flex-direction:column;
 }
 
 }
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1.1;
+}
+
+.logo-text h2{
+margin:0;
+font-family:'Poppins',sans-serif;
+font-size:24px;
+font-weight:700;
+}
+
+.logo-text p{
+margin:2px 0 0;
+font-size:11px;
+color:#444;
+font-weight:500;
+letter-spacing:0.5px;
+}
