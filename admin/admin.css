@@ -653,3 +653,156 @@ text-align:center;
 padding:60px !important;
 color:#777;
 }
+/* ========================================
+POTHYPANNA CMS 2.0
+======================================== */
+
+body{
+
+background:#FFF8DD;
+
+font-family:'Inter',sans-serif;
+
+color:#111;
+
+}
+
+.dashboard{
+
+display:flex;
+
+min-height:100vh;
+
+background:#FFF8DD;
+
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar{
+
+width:270px;
+
+background:#111;
+
+color:white;
+
+padding:30px 22px;
+
+display:flex;
+
+flex-direction:column;
+
+border-radius:0 28px 28px 0;
+
+box-shadow:8px 0 30px rgba(0,0,0,.15);
+
+}
+
+.sidebar-logo{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+margin-bottom:45px;
+
+}
+
+.sidebar-logo img{
+
+width:78px;
+
+margin-bottom:12px;
+
+}
+
+.sidebar-logo h2{
+
+font-size:24px;
+
+margin:0;
+
+font-weight:700;
+
+}
+
+.sidebar-logo p{
+
+margin-top:4px;
+
+color:#FFD54A;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+.sidebar-menu{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.sidebar-menu li{
+
+margin-bottom:12px;
+
+border-radius:14px;
+
+transition:.3s;
+
+}
+
+.sidebar-menu li:hover{
+
+background:#FFD54A;
+
+transform:translateX(6px);
+
+}
+
+.sidebar-menu li.active{
+
+background:#FFD54A;
+
+}
+
+.sidebar-menu li.active span{
+
+color:#111;
+
+font-weight:700;
+
+}
+
+.sidebar-menu a{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+padding:16px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+}
+
+.sidebar-menu li span{
+
+font-size:16px;
+
+}
