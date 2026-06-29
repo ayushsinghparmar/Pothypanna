@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pothypanna Admin Login</title>
+<title>Pothypanna CMS</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="admin.css">
 
 </head>
 
 <body>
 
-<div class="login-container">
+<header>
+
+<nav>
+
+<a href="../index.html" class="logo">
+
+<img src="../logo.png" alt="Pothypanna">
+
+<div class="logo-text">
+
+<h2>Pothypanna</h2>
+
+<p>For Readers. By Readers.</p>
+
+</div>
+
+</a>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../books.html">Books</a></li>
+
+<li><a href="../authors.html">Authors</a></li>
+
+<li><a href="../categories.html">Categories</a></li>
+
+<li><a href="../become-author.html">Become Author</a></li>
+
+<li><a href="../contact.html">Contact</a></li>
+
+<li><a href="login.html">Admin</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="login-page">
 
 <div class="login-card">
 
-<img src="../logo.png" class="logo" alt="Pothypanna">
+<h1>Pothypanna CMS</h1>
 
-<h1>Admin Login</h1>
+<p>
 
-<p>Welcome back to Pothypanna.</p>
+Manage your bookstore from one place.
+
+</p>
 
 <form id="loginForm">
 
 <input
 type="email"
 id="email"
-placeholder="Email"
+placeholder="Admin Email"
 required
 >
 
@@ -38,7 +88,7 @@ placeholder="Password"
 required
 >
 
-<button type="submit">
+<button>
 
 Login
 
@@ -50,11 +100,12 @@ Login
 
 </div>
 
-</div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="admin.js"></script>
 
 </body>
+
 </html>
