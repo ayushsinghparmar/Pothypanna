@@ -75,7 +75,19 @@ if (form) {
 
 (async () => {
 
-    if (!window.location.pathname.endsWith("dashboard.html")) return;
+    const protectedPages = [
+    "dashboard.html",
+    "books.html",
+    "add-book.html",
+    "authors.html",
+    "categories.html",
+    "platforms.html",
+    "settings.html"
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+if (!protectedPages.includes(currentPage)) return;
 
     const {
         data: { session }
