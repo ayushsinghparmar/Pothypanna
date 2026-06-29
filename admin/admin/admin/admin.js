@@ -1,32 +1,110 @@
 const SUPABASE_URL = "https://vwueomdiatgjkbqxdwzk.supabase.co";
 
-const SUPABASE_ANON_KEY = "sb_publishable_9DDEETnQ2I4AtLmal4TNSw_0QmYGnV6";
+const SUPABASE_ANON_KEY = "YOUR_ANON_KEY";
 
 const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_ANON_KEY
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
 );
+
+/* -----------------------------
+   AUTO LOGIN
+------------------------------*/
+
+(async () => {
+
+    const {
+        data: { session }
+    } = await supabase.auth.getSession();
+
+    if (
+        session &&
+        window.location.pathname.endsWith("login.html")
+    ) {
+        window.location.href = "dashboard.html";
+    }
+
+})();
+
+/* -----------------------------
+   LOGIN
+------------------------------*/
 
 const form = document.getElementById("loginForm");
 
-form.addEventListener("submit", async (e) => {
+if (form) {
 
-  e.preventDefault();
+    form.addEventListener("submit", async (e) => {
 
-  const email = document.getElementById("email").value;
+        e.preventDefault();
 
-  const password = document.getElementById("password").value;
+        const email = document.getElementById("email").value.trim();
 
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password
-  });
+        const password = document.getElementById("password").value;
 
-  if (error) {
-    document.getElementById("error").textContent = error.message;
-    return;
-  }
+        const errorBox = document.getElementById("error");
 
-  window.location.href = "dashboard.html";
+        errorBox.textContent = "";
 
-});
+        const { error } =
+            await supabase.auth.signInWithPassword({
+
+                email,
+
+                password
+
+            });
+
+        if (error) {
+
+            errorBox.textContent = error.message;
+
+            return;
+
+        }
+
+        window.location.href = "dashboard.html";
+
+    });
+
+}
+
+/* -----------------------------
+   PROTECT DASHBOARD
+------------------------------*/
+
+(async () => {
+
+    if (!window.location.pathname.endsWith("dashboard.html")) return;
+
+    const {
+        data: { session }
+    } = await supabase.auth.getSession();
+
+    if (!session) {
+
+        window.location.href = "login.html";
+
+        return;
+
+    }
+
+})();
+
+/* -----------------------------
+   LOGOUT
+------------------------------*/
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", async () => {
+
+        await supabase.auth.signOut();
+
+        window.location.href = "login.html";
+
+    });
+
+}
