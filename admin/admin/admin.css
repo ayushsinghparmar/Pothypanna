@@ -565,3 +565,91 @@ width:24px;
 text-align:center;
 font-size:18px;
 }
+/* ===========================
+BOOKS MANAGEMENT
+=========================== */
+
+.page-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.primary-btn{
+background:#FFD54A;
+color:#111;
+border:none;
+padding:14px 24px;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.primary-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.toolbar{
+display:flex;
+gap:15px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.search-input{
+flex:1;
+min-width:260px;
+padding:14px 16px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:15px;
+outline:none;
+}
+
+.search-input:focus{
+border-color:#FFD54A;
+}
+
+.filter-select{
+padding:14px 16px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:15px;
+background:white;
+}
+
+.table-container{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.books-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.books-table th{
+background:#111;
+color:white;
+padding:18px;
+text-align:left;
+}
+
+.books-table td{
+padding:18px;
+border-bottom:1px solid #eee;
+}
+
+.empty-table{
+text-align:center;
+padding:60px !important;
+color:#777;
+}
