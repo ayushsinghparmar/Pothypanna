@@ -83,104 +83,105 @@
 
         <div class="header-left">
             <h1>Dashboard</h1>
-            <p>Welcome back, Ayush 👋 Manage your bookstore from one place.</p>
+            <p>Manage your bookstore from one place.</p>
         </div>
 
         <div class="header-right">
 
-            <div class="notification-btn">
-                <span class="notification-icon">🔔</span>
-                <span>Notifications</span>
-            </div>
+            <button class="icon-btn">🔔</button>
 
-            <div class="admin-profile">
-                <div class="admin-avatar">A</div>
+            <div class="admin-box">
+                <div class="avatar">A</div>
 
                 <div>
-                    <strong>Ayush</strong><br>
+                    <strong>Ayush</strong>
                     <small>Administrator</small>
                 </div>
-
             </div>
 
         </div>
 
     </div>
 
-    <div class="cards">
+    <section class="stats-grid">
 
-        <div class="card">
-            <h2>📚 Books</h2>
-            <h3>0</h3>
-            <p>Total books in library</p>
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-info">
+                <h2 id="bookCount">0</h2>
+                <p>Books</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>✍ Authors</h2>
-            <h3>0</h3>
-            <p>Registered authors</p>
+        <div class="stat-card">
+            <div class="stat-icon">✍️</div>
+            <div class="stat-info">
+                <h2 id="authorCount">0</h2>
+                <p>Authors</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>🗂 Categories</h2>
-            <h3>0</h3>
-            <p>Available categories</p>
+        <div class="stat-card">
+            <div class="stat-icon">🗂️</div>
+            <div class="stat-info">
+                <h2 id="categoryCount">0</h2>
+                <p>Categories</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>🛒 Platforms</h2>
-            <h3>0</h3>
-            <p>Purchase platforms</p>
+        <div class="stat-card">
+            <div class="stat-icon">🛒</div>
+            <div class="stat-info">
+                <h2 id="platformCount">0</h2>
+                <p>Platforms</p>
+            </div>
         </div>
 
-    </div>
+    </section>
 
-    <div class="quick-grid">
+    <section class="action-grid">
 
-        <div class="action-card">
-            <div class="action-icon">📚</div>
+        <button class="action-card">
+            <span>📚</span>
             <h3>Add Book</h3>
-            <p>Create a new book listing.</p>
-        </div>
+        </button>
 
-        <div class="action-card">
-            <div class="action-icon">✍</div>
+        <button class="action-card">
+            <span>✍️</span>
             <h3>Add Author</h3>
-            <p>Add a new author profile.</p>
-        </div>
+        </button>
 
-        <div class="action-card">
-            <div class="action-icon">🗂</div>
+        <button class="action-card">
+            <span>🗂️</span>
             <h3>Add Category</h3>
-            <p>Create a new book category.</p>
-        </div>
+        </button>
 
-        <div class="action-card">
-            <div class="action-icon">🛒</div>
+        <button class="action-card">
+            <span>🛒</span>
             <h3>Add Platform</h3>
-            <p>Manage purchase platforms.</p>
+        </button>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <h2>Recent Activity</h2>
         </div>
 
-    </div>
+        <div class="empty-panel">
 
-    <div class="activity-section">
-
-        <h2>Recent Activity</h2>
-
-        <div class="empty-state">
-
-            <h3>No activity yet</h3>
+            <h3>No Activity Yet</h3>
 
             <p>
-                Books, authors, categories and other recent actions will appear here automatically.
+                Activity from books, authors and categories will appear here.
             </p>
 
         </div>
 
-    </div>
+    </section>
 
 </main>
-
 </div>
 
 </body>
