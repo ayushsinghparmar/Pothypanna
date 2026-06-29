@@ -526,3 +526,42 @@ flex-wrap:wrap;
 }
 
 }
+
+/* Sidebar Menu */
+
+.sidebar-menu{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.sidebar-menu li{
+display:flex;
+align-items:center;
+gap:14px;
+padding:16px 18px;
+margin-bottom:10px;
+border-radius:14px;
+cursor:pointer;
+font-weight:600;
+transition:all .25s ease;
+border-left:4px solid transparent;
+}
+
+.sidebar-menu li:hover{
+background:#1f1f1f;
+border-left-color:#FFD54A;
+transform:translateX(4px);
+}
+
+.sidebar-menu li.active{
+background:#FFD54A;
+color:#111;
+border-left-color:#111;
+}
+
+.sidebar-menu li span:first-child{
+width:24px;
+text-align:center;
+font-size:18px;
+}
