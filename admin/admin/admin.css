@@ -379,3 +379,150 @@ padding:30px;
 }
 
 }
+
+/* ===================================
+   DASHBOARD HEADER
+=================================== */
+
+.dashboard-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.header-left h1{
+margin:0;
+font-size:40px;
+}
+
+.header-left p{
+margin-top:8px;
+margin-bottom:0;
+color:#666;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.notification-btn,
+.admin-profile{
+background:#fff;
+border-radius:14px;
+padding:12px 18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+transition:.25s ease;
+}
+
+.notification-btn:hover,
+.admin-profile:hover{
+transform:translateY(-3px);
+}
+
+.notification-icon{
+font-size:20px;
+}
+
+.admin-avatar{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#FFD54A;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:18px;
+color:#111;
+}
+
+/* ===================================
+   QUICK ACTION CARDS
+=================================== */
+
+.quick-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+margin-top:40px;
+margin-bottom:40px;
+}
+
+.action-card{
+background:#fff;
+padding:28px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.25s ease;
+}
+
+.action-card:hover{
+transform:translateY(-6px);
+}
+
+.action-card h3{
+margin-top:15px;
+margin-bottom:8px;
+font-size:22px;
+}
+
+.action-card p{
+margin:0;
+color:#666;
+}
+
+.action-icon{
+font-size:34px;
+}
+
+/* ===================================
+   RECENT ACTIVITY
+=================================== */
+
+.activity-section{
+background:#fff;
+border-radius:20px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.activity-section h2{
+margin-bottom:18px;
+font-family:'Poppins',sans-serif;
+}
+
+.empty-state{
+padding:45px;
+text-align:center;
+border:2px dashed #e3e3e3;
+border-radius:16px;
+color:#777;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+.dashboard-header{
+align-items:flex-start;
+}
+
+.header-right{
+width:100%;
+justify-content:flex-start;
+flex-wrap:wrap;
+}
+
+}
