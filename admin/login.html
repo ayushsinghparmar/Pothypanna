@@ -62,15 +62,37 @@
 
 <section class="login-page">
 
-<div class="login-card">
+<div class="login-wrapper">
+
+<div class="login-left">
 
 <h1>Pothypanna CMS</h1>
 
 <p>
-
 Manage your bookstore from one place.
-
 </p>
+
+<ul class="features">
+
+<li>📚 Manage Books</li>
+
+<li>👤 Manage Authors</li>
+
+<li>📂 Manage Categories</li>
+
+<li>🛒 Manage Purchase Platforms</li>
+
+<li>⚙ Website Settings</li>
+
+</ul>
+
+</div>
+
+<div class="login-card">
+
+<h2>Welcome Back</h2>
+
+<p>Login to continue</p>
 
 <form id="loginForm">
 
@@ -78,17 +100,15 @@ Manage your bookstore from one place.
 type="email"
 id="email"
 placeholder="Admin Email"
-required
->
+required>
 
 <input
 type="password"
 id="password"
 placeholder="Password"
-required
->
+required>
 
-<button>
+<button type="submit">
 
 Login
 
@@ -97,6 +117,8 @@ Login
 </form>
 
 <p id="error"></p>
+
+</div>
 
 </div>
 
