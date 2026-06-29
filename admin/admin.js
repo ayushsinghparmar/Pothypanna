@@ -15,7 +15,7 @@ const supabaseClient = window.supabase.createClient(
 
     const {
         data: { session }
-    } = await supabase.auth.getSession();
+    } = await supabaseClient.auth.getSession();
 
     if (
         session &&
@@ -47,7 +47,7 @@ if (form) {
         errorBox.textContent = "";
 
         const { error } =
-            await supabase.auth.signInWithPassword({
+            await supabaseClient.auth.signInWithPassword({
 
                 email,
 
@@ -91,7 +91,7 @@ if (!protectedPages.includes(currentPage)) return;
 
     const {
         data: { session }
-    } = await supabase.auth.getSession();
+    } = await supabaseClient.auth.getSession();
 
     if (!session) {
 
@@ -113,7 +113,7 @@ if (logoutBtn) {
 
     logoutBtn.addEventListener("click", async () => {
 
-        await supabase.auth.signOut();
+        await supabaseClient.auth.signOut();
 
         window.location.href = "login.html";
 
