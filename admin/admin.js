@@ -115,7 +115,10 @@ if (logoutBtn) {
 
         await supabaseClient.auth.signOut();
 
-        window.location.href = "login.html";
+        localStorage.clear();
+        sessionStorage.clear();
+
+        window.location.replace("login.html");
 
     });
 
