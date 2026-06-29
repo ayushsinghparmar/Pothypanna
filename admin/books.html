@@ -81,11 +81,92 @@
 
 <main class="content">
 
+<div class="page-header">
+
+<div>
+
 <h1>Books Management</h1>
 
-<p>
-Manage every book available on Pothypanna.
-</p>
+<p>Manage every book available on Pothypanna.</p>
+
+</div>
+
+<button class="primary-btn">
+
++ Add Book
+
+</button>
+
+</div>
+
+<div class="toolbar">
+
+<input
+type="text"
+placeholder="Search books..."
+class="search-input">
+
+<select class="filter-select">
+
+<option>All Categories</option>
+
+</select>
+
+<select class="filter-select">
+
+<option>All Status</option>
+
+<option>Published</option>
+
+<option>Draft</option>
+
+<option>Archived</option>
+
+</select>
+
+</div>
+
+<div class="table-container">
+
+<table class="books-table">
+
+<thead>
+
+<tr>
+
+<th>Cover</th>
+
+<th>Title</th>
+
+<th>Author</th>
+
+<th>Category</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td colspan="6" class="empty-table">
+
+No books found. Click <strong>+ Add Book</strong> to create your first book.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
 
 </main>
 
