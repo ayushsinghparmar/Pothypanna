@@ -1157,26 +1157,29 @@ flex-direction:column;
 
 font-family:'Poppins',sans-serif;
 
-font-size:42px;
+font-size:36px;
 
 font-weight:700;
 
-line-height:1.15;
+line-height:1.2;
+
+letter-spacing:-0.8px;
 
 margin:0;
 
-color:#111;
+color:#151515;
 
 }
 
 .wave{
 
-font-size:28px;
+font-size:24px;
+
+vertical-align:middle;
 
 margin-left:6px;
 
 }
-
 .header-text p{
 
 font-size:18px;
