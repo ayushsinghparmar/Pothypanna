@@ -227,16 +227,18 @@ window.location.href=card.dataset.page;
 ADMIN DROPDOWN
 ========================================== */
 
-const adminMenuBtn = document.getElementById("adminMenuBtn");
-const adminDropdown = document.getElementById("adminDropdown");
+const adminMenuBtn=document.getElementById("adminMenuBtn");
+const adminDropdown=document.getElementById("adminDropdown");
 
-if (adminMenuBtn && adminDropdown) {
+if(adminMenuBtn&&adminDropdown){
 
 adminMenuBtn.addEventListener("click",(e)=>{
 
 e.stopPropagation();
 
 adminDropdown.classList.toggle("show");
+
+notificationDropdown?.classList.remove("show");
 
 });
 
@@ -252,17 +254,39 @@ const dropdownLogout=document.getElementById("dropdownLogout");
 
 if(dropdownLogout){
 
-dropdownLogout.addEventListener("click",async(e)=>{
+dropdownLogout.addEventListener("click",(e)=>{
 
 e.preventDefault();
-
-await supabaseClient.auth.signOut();
 
 localStorage.clear();
 
 sessionStorage.clear();
 
-window.location.replace("login.html");
+window.location.href="login.html";
+
+});
+
+}
+/* ==========================================
+NOTIFICATION DROPDOWN
+========================================== */
+
+const notificationBtn=document.getElementById("notificationBtn");
+const notificationDropdown=document.getElementById("notificationDropdown");
+
+if(notificationBtn&&notificationDropdown){
+
+notificationBtn.addEventListener("click",(e)=>{
+
+e.stopPropagation();
+
+notificationDropdown.classList.toggle("show");
+
+});
+
+document.addEventListener("click",()=>{
+
+notificationDropdown.classList.remove("show");
 
 });
 
