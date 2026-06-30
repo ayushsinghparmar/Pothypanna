@@ -1,211 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pothypanna CMS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
 <aside class="sidebar">
 
-    <div class="sidebar-logo">
+<div class="sidebar-logo">
 
-        <img src="../logo.png" alt="Pothypanna">
+<img src="../logo.png" alt="Logo">
 
-        <h2>Pothypanna</h2>
+<h2>Pothypanna</h2>
 
-        <p>Book Management System</p>
+<p>CMS</p>
 
-    </div>
+</div>
 
-    <ul class="sidebar-menu">
+<ul class="sidebar-menu">
 
-        <li class="active">
-            <a href="dashboard.html" class="sidebar-link">
-                <span>🏠</span>
-                <span>Dashboard</span>
-            </a>
-        </li>
+<li class="active">
+    <a href="dashboard.html" class="sidebar-link">
+        <span>🏠</span>
+        <span>Dashboard</span>
+    </a>
+</li>
 
-        <li>
-            <a href="books.html" class="sidebar-link">
-                <span>📚</span>
-                <span>Books</span>
-            </a>
-        </li>
+<li>
+    <a href="books.html" class="sidebar-link">
+        <span>📚</span>
+        <span>Books</span>
+    </a>
+</li>
 
-        <li>
-            <a href="#" class="sidebar-link">
-                <span>✒️</span>
-                <span>Authors</span>
-            </a>
-        </li>
+<li>
+    <a href="#" class="sidebar-link">
+        <span>✍️</span>
+        <span>Authors</span>
+    </a>
+</li>
 
-        <li>
-            <a href="#" class="sidebar-link">
-                <span>📁</span>
-                <span>Categories</span>
-            </a>
-        </li>
+<li>
+    <a href="#" class="sidebar-link">
+        <span>🗂️</span>
+        <span>Categories</span>
+    </a>
+</li>
+<li>
+    <a href="#" class="sidebar-link">
+        <span>🛒</span>
+        <span>Platforms</span>
+    </a>
+</li>
 
-        <li>
-            <a href="#" class="sidebar-link">
-                <span>🛒</span>
-                <span>Platforms</span>
-            </a>
-        </li>
+<li>
+    <a href="#" class="sidebar-link">
+        <span>⚙️</span>
+        <span>Website Settings</span>
+    </a>
+</li>
 
-        <li>
-            <a href="#" class="sidebar-link">
-                <span>⚙️</span>
-                <span>Website Settings</span>
-            </a>
-        </li>
+<li id="logoutBtn">
+    <a href="#" class="sidebar-link">
+        <span>🚪</span>
+        <span>Logout</span>
+    </a>
+</li>
 
-    </ul>
-
-    <div style="margin-top:auto;"></div>
-
-    <div class="sidebar-footer">
-
-        <div class="footer-avatar">
-
-            A
-
-        </div>
-
-        <div class="footer-info">
-
-            <h4>Ayush</h4>
-
-            <p>Administrator</p>
-
-        </div>
-
-    </div>
-
-    <br>
-
-    <ul class="sidebar-menu">
-
-        <li id="logoutBtn">
-
-            <a href="#" class="sidebar-link">
-
-                <span>🚪</span>
-
-                <span>Logout</span>
-
-            </a>
-
-        </li>
-
-    </ul>
+</ul>
 
 </aside>
-<div class="dashboard-header">
 
-    <div class="header-left">
+<main class="content">
 
-        <div class="welcome-badge">
+    <div class="dashboard-header">
 
-            ☀️ Good Morning
+       <div class="header-left">
 
-        </div>
+    <span class="welcome-badge">
+        👋 Welcome Back
+    </span>
 
-        <h1>Dashboard</h1>
+    <h1>Good Evening, Ayush</h1>
 
-        <p>
-            Welcome back, Ayush. Here's what's happening in your bookstore today.
-        </p>
+    <p>
+        Manage your bookstore, authors, categories and website from one place.
+    </p>
 
+</div>
+
+        <div class="header-right">
+
+            <button class="icon-btn">🔔</button>
+
+            <div class="admin-box">
+
+    <div class="avatar">
+        A
     </div>
 
-    <div class="header-right">
+    <div>
 
-        <button class="icon-btn">
+        <h4>Ayush</h4>
 
-            🔔
-
-        </button>
-
-        <div class="admin-box">
-
-            <div class="avatar">
-
-                A
-
-            </div>
-
-            <div>
-
-                <strong>Ayush</strong>
-
-                <small>Administrator</small>
-
-            </div>
-
-        </div>
+        <span>Administrator</span>
 
     </div>
 
 </div>
-<section class="stats-grid">
-
-    <div class="stat-card">
-
-        <div class="stat-icon">📚</div>
-
-        <div class="stat-info">
-
-            <h2 id="bookCount">0</h2>
-
-            <p>Total Books</p>
-
-            <span class="stat-badge">+0 this month</span>
 
         </div>
 
     </div>
 
-    <div class="stat-card">
+    <section class="stats-grid">
 
-        <div class="stat-icon">✍️</div>
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-info">
+                <h2 id="bookCount">0</h2>
+                <p>Books</p>
+            </div>
+        </div>
 
-        <div class="stat-info">
+        <div class="stat-card">
+            <div class="stat-icon">✍️</div>
+            <div class="stat-info">
+                <h2 id="authorCount">0</h2>
+                <p>Authors</p>
+            </div>
+        </div>
 
-            <h2 id="authorCount">0</h2>
+        <div class="stat-card">
+            <div class="stat-icon">🗂️</div>
+            <div class="stat-info">
+                <h2 id="categoryCount">0</h2>
+                <p>Categories</p>
+            </div>
+        </div>
 
-            <p>Total Authors</p>
+        <div class="stat-card">
+            <div class="stat-icon">🛒</div>
+            <div class="stat-info">
+                <h2 id="platformCount">0</h2>
+                <p>Platforms</p>
+            </div>
+        </div>
 
-            <span class="stat-badge">+0 this month</span>
+    </section>
+
+    <section class="action-grid">
+
+        <button class="action-card">
+
+    <span>📚</span>
+
+    <h3>Add Book</h3>
+
+    <p>Add a new book to your bookstore.</p>
+
+    <div class="action-arrow">→</div>
+
+</button>
+
+        <button class="action-card">
+
+    <span>✍️</span>
+
+    <h3>Add Author</h3>
+
+    <p>Create a new author profile.</p>
+
+    <div class="action-arrow">→</div>
+
+</button>
+
+        <button class="action-card">
+
+    <span>🗂️</span>
+
+    <h3>Add Category</h3>
+
+    <p>Create a new book category.</p>
+
+    <div class="action-arrow">→</div>
+
+</button>
+
+        <button class="action-card">
+
+    <span>🛒</span>
+
+    <h3>Add Platform</h3>
+
+    <p>Add a new purchase platform.</p>
+
+    <div class="action-arrow">→</div>
+
+</button>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <h2>Recent Activity</h2>
+        </div>
+
+        <div class="empty-panel">
+
+            <h3>No Activity Yet</h3>
+
+            <p>
+                Activity from books, authors and categories will appear here.
+            </p>
 
         </div>
 
-    </div>
+    </section>
 
-    <div class="stat-card">
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin.js"></script>
+</body>
 
-        <div class="stat-icon">🗂️</div>
-
-        <div class="stat-info">
-
-            <h2 id="categoryCount">0</h2>
-
-            <p>Categories</p>
-
-            <span class="stat-badge">Updated</span>
-
-        </div>
-
-    </div>
-
-    <div class="stat-card">
-
-        <div class="stat-icon">🛒</div>
-
-        <div class="stat-info">
-
-            <h2 id="platformCount">0</h2>
-
-            <p>Platforms</p>
-
-            <span class="stat-badge">Ready</span>
-
-        </div>
-
-    </div>
-
-</section>
+</html>
