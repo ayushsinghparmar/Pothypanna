@@ -312,13 +312,13 @@ placeholder="Optional">
 </div>
 
 </div>
-  <div class="form-card">
+ <div class="form-card">
 
 <div class="section-title">
 
 <h2>Categories, Pricing & Selling</h2>
 
-<p>Configure book classification, pricing and sales channels.</p>
+<p>Configure book classification, pricing, selling and fulfillment.</p>
 
 </div>
 
@@ -359,7 +359,6 @@ placeholder="Fiction, Motivation, Business">
 <label>Format *</label>
 
 <select>
-
 <option>Paperback</option>
 <option>Hardcover</option>
 <option>eBook PDF</option>
@@ -367,7 +366,6 @@ placeholder="Fiction, Motivation, Business">
 <option>Paperback + eBook</option>
 <option>Hardcover + eBook</option>
 <option>All Formats</option>
-
 </select>
 
 </div>
@@ -377,12 +375,10 @@ placeholder="Fiction, Motivation, Business">
 <label>Publication Status</label>
 
 <select>
-
 <option>Draft</option>
 <option>Published</option>
 <option>Scheduled</option>
 <option>Archived</option>
-
 </select>
 
 </div>
@@ -392,11 +388,9 @@ placeholder="Fiction, Motivation, Business">
 <label>Visibility</label>
 
 <select>
-
 <option>Public</option>
 <option>Private</option>
 <option>Hidden</option>
-
 </select>
 
 </div>
@@ -406,10 +400,8 @@ placeholder="Fiction, Motivation, Business">
 <label>Featured</label>
 
 <select>
-
 <option>No</option>
 <option>Yes</option>
-
 </select>
 
 </div>
@@ -451,10 +443,8 @@ placeholder="Fiction, Motivation, Business">
 <label>Sell on Pothypanna</label>
 
 <select>
-
 <option>Yes</option>
 <option>No</option>
-
 </select>
 
 </div>
@@ -495,15 +485,113 @@ placeholder="Fiction, Motivation, Business">
 
 <label>Additional Purchase Links</label>
 
+<textarea rows="4" placeholder="One link per line"></textarea>
+
+</div>
+
+<hr class="form-divider">
+
+<div class="form-group">
+
+<label>POD Partner</label>
+
+<select>
+<option>Select POD Partner</option>
+<option>Qikink</option>
+<option>Pothi</option>
+<option>Notion Press</option>
+<option>BookRiver</option>
+<option>Other</option>
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Partner SKU</label>
+
+<input
+type="text"
+placeholder="Partner Product ID">
+
+</div>
+
+<div class="form-group">
+
+<label>Printing Cost (₹)</label>
+
+<input
+type="number"
+placeholder="120">
+
+</div>
+
+<div class="form-group">
+
+<label>Shipping Cost (₹)</label>
+
+<input
+type="number"
+placeholder="60">
+
+</div>
+
+<div class="form-group">
+
+<label>Book Weight (g)</label>
+
+<input
+type="number"
+placeholder="250">
+
+</div>
+
+<div class="form-group">
+
+<label>Dimensions</label>
+
+<input
+type="text"
+placeholder="8.5 × 5.5 × 0.5 in">
+
+</div>
+
+<div class="form-group">
+
+<label>Inventory Type</label>
+
+<select>
+<option>Print on Demand</option>
+<option>In Stock</option>
+<option>Pre Order</option>
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Inventory Quantity</label>
+
+<input
+type="number"
+placeholder="0">
+
+</div>
+
+<div class="form-group full-width">
+
+<label>Internal Notes</label>
+
 <textarea
 rows="4"
-placeholder="One link per line"></textarea>
+placeholder="Visible only to admin"></textarea>
 
 </div>
 
 </div>
 
-</div></main>
+</div>
+</main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="admin.js"></script>
