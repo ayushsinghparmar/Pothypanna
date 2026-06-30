@@ -291,3 +291,26 @@ notificationDropdown.classList.remove("show");
 });
 
 }
+/* ==========================================
+SIDEBAR ACTIVE LINK
+========================================== */
+
+const currentPage=window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".sidebar-link").forEach(link=>{
+
+const href=link.getAttribute("href");
+
+if(href===currentPage){
+
+document.querySelectorAll(".sidebar-menu li").forEach(li=>{
+
+li.classList.remove("active");
+
+});
+
+link.parentElement.classList.add("active");
+
+}
+
+});
