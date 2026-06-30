@@ -53,32 +53,32 @@
 </li>
 
 <li>
-    <a href="#" class="sidebar-link">
+    <a href="authors.html" class="sidebar-link">
         <span class="material-symbols-rounded">edit_square</span>
         <span>Authors</span>
     </a>
 </li>
 
 <li>
-    <a href="#" class="sidebar-link">
+    <a href="categories.html" class="sidebar-link">
         <span class="material-symbols-rounded">category</span>
         <span>Categories</span>
     </a>
 </li>
+
 <li>
-    <a href="#" class="sidebar-link">
+    <a href="platforms.html" class="sidebar-link">
         <span class="material-symbols-rounded">shopping_cart</span>
         <span>Platforms</span>
     </a>
 </li>
 
 <li>
-    <a href="#" class="sidebar-link">
+    <a href="settings.html" class="sidebar-link">
         <span class="material-symbols-rounded">settings</span>
         <span>Website Settings</span>
     </a>
 </li>
-
 <li id="logoutBtn">
     <a href="#" class="sidebar-link">
         <span class="material-symbols-rounded">logout</span>
@@ -116,7 +116,9 @@
 
 <div class="header-right">
 
-<button class="icon-btn">
+<div class="notification-wrapper">
+
+<button class="icon-btn" id="notificationBtn">
 
 <span class="material-symbols-rounded">
 notifications
@@ -124,6 +126,27 @@ notifications
 
 </button>
 
+<div class="notification-dropdown" id="notificationDropdown">
+
+<div class="dropdown-header">
+
+<h3>Notifications</h3>
+
+</div>
+
+<div class="dropdown-body">
+
+<p class="empty-dropdown">
+
+No new notifications.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 <div class="admin-box">
 
 <div class="avatar">
@@ -149,7 +172,7 @@ expand_more
 </div>
 <section class="stats-grid">
 
-<div class="stat-card">
+<a href="books.html" class="stat-card">
 
 <div class="stat-icon">
 <span class="material-symbols-rounded">menu_book</span>
@@ -167,9 +190,9 @@ expand_more
 
 </div>
 
-</div>
+</a>
 
-<div class="stat-card">
+<a href="authors.html" class="stat-card">
 
 <div class="stat-icon">
 <span class="material-symbols-rounded">edit_square</span>
@@ -187,9 +210,9 @@ expand_more
 
 </div>
 
-</div>
+</a>
 
-<div class="stat-card">
+<a href="categories.html" class="stat-card">
 
 <div class="stat-icon">
 <span class="material-symbols-rounded">category</span>
@@ -207,9 +230,9 @@ expand_more
 
 </div>
 
-</div>
+</a>
 
-<div class="stat-card">
+<a href="platforms.html" class="stat-card">
 
 <div class="stat-icon">
 <span class="material-symbols-rounded">shopping_cart</span>
@@ -227,8 +250,7 @@ expand_more
 
 </div>
 
-</div>
-
+</a>
 </section>
   <section class="panel">
 
@@ -238,9 +260,7 @@ expand_more
 
 </div>
 
-<div class="action-grid">
-
-<button class="action-card">
+<a href="add-book.html" class="action-card">
 
 <span class="material-symbols-rounded action-icon">library_add</span>
 
@@ -254,8 +274,55 @@ expand_more
 
 </div>
 
-</button>
+</a>
 
+<a href="authors.html" class="action-card">
+
+<span class="material-symbols-rounded action-icon">draw</span>
+
+<h3>Add Author</h3>
+
+<p>Add a new author</p>
+
+<div class="action-arrow">
+
+<span class="material-symbols-rounded">arrow_forward</span>
+
+</div>
+
+</a>
+
+<a href="categories.html" class="action-card">
+
+<span class="material-symbols-rounded action-icon">create_new_folder</span>
+
+<h3>Add Category</h3>
+
+<p>Create a new category</p>
+
+<div class="action-arrow">
+
+<span class="material-symbols-rounded">arrow_forward</span>
+
+</div>
+
+</a>
+
+<a href="platforms.html" class="action-card">
+
+<span class="material-symbols-rounded action-icon">add_shopping_cart</span>
+
+<h3>Add Platform</h3>
+
+<p>Add a purchase platform</p>
+
+<div class="action-arrow">
+
+<span class="material-symbols-rounded">arrow_forward</span>
+
+</div>
+
+</a>
 <button class="action-card">
 
 <span class="material-symbols-rounded action-icon">draw</span>
