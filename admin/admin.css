@@ -499,6 +499,10 @@ transition:.45s;
 
 cursor:pointer;
 
+text-decoration:none;
+
+color:inherit;
+
 }
 
 .stat-card:hover{
@@ -605,8 +609,11 @@ transition:.45s;
 
 text-align:center;
 
-}
+text-decoration:none;
 
+color:inherit;
+
+}
 .action-card:hover{
 
 transform:translateY(-12px);
