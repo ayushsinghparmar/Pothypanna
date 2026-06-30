@@ -205,13 +205,15 @@ placeholder="150">
 
 </div>
 
+</div>
+
 <div class="form-card">
 
 <div class="section-title">
 
-<h2>Book Cover</h2>
+<h2>Author Information</h2>
 
-<p>Upload the cover and additional images.</p>
+<p>Choose or enter author and publisher details.</p>
 
 </div>
 
@@ -219,22 +221,41 @@ placeholder="150">
 
 <div class="form-group">
 
-<label>Cover Image *</label>
+<label>Author *</label>
 
 <input
-type="file"
-accept="image/*">
+type="text"
+placeholder="Author name">
 
 </div>
 
 <div class="form-group">
 
-<label>Gallery Images</label>
+<label>Co-Author</label>
 
 <input
-type="file"
-accept="image/*"
-multiple>
+type="text"
+placeholder="Co-author (Optional)">
+
+</div>
+
+<div class="form-group">
+
+<label>Translator</label>
+
+<input
+type="text"
+placeholder="Translator (Optional)">
+
+</div>
+
+<div class="form-group">
+
+<label>Publisher</label>
+
+<input
+type="text"
+placeholder="Publisher name">
 
 </div>
 
@@ -243,7 +264,6 @@ multiple>
 </div>
 
 </main>
-
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="admin.js"></script>
