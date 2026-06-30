@@ -163,3 +163,27 @@ icon.textContent = "🌙";
 }
 
 }
+/* ==========================
+NOTIFICATION DROPDOWN
+========================== */
+
+const notificationBtn = document.getElementById("notificationBtn");
+const notificationDropdown = document.getElementById("notificationDropdown");
+
+if (notificationBtn && notificationDropdown) {
+
+    notificationBtn.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        notificationDropdown.classList.toggle("show");
+
+    });
+
+    document.addEventListener("click", () => {
+
+        notificationDropdown.classList.remove("show");
+
+    });
+
+}
