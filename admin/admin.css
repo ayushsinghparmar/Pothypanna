@@ -487,19 +487,6 @@ margin-bottom:32px;
 
 }
 
-.header-left h1{
-
-font-size:40px;
-
-font-family:'Poppins',sans-serif;
-
-font-weight:700;
-
-margin-bottom:8px;
-
-color:#111;
-
-}
 
 .header-left p{
 
@@ -1132,18 +1119,17 @@ flex-shrink:0;
 
 font-family:'Poppins',sans-serif;
 
-font-size:58px;
+font-size:38px;
 
 font-weight:700;
 
-line-height:1.1;
+line-height:1.2;
 
-margin-bottom:10px;
+margin-bottom:6px;
 
 color:#111;
 
 }
-
 .wave{
 
 font-size:42px;
