@@ -123,3 +123,43 @@ if (logoutBtn) {
     });
 
 }
+/* ==========================
+AUTOMATIC GREETING
+========================== */
+
+const hour = new Date().getHours();
+
+const greeting = document.getElementById("greeting");
+const icon = document.getElementById("greetingIcon");
+
+if (greeting && icon) {
+
+if (hour >= 5 && hour < 12) {
+
+greeting.textContent = "Good Morning";
+icon.textContent = "🌅";
+
+}
+
+else if (hour >= 12 && hour < 17) {
+
+greeting.textContent = "Good Afternoon";
+icon.textContent = "☀️";
+
+}
+
+else if (hour >= 17 && hour < 21) {
+
+greeting.textContent = "Good Evening";
+icon.textContent = "🌇";
+
+}
+
+else {
+
+greeting.textContent = "Good Night";
+icon.textContent = "🌙";
+
+}
+
+}
