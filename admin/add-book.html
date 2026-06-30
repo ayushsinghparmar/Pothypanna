@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Book | Pothypanna CMS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar">
+
+<div class="sidebar-logo">
+
+<img src="../logo.png" alt="Logo">
+
+<h2>Pothypanna</h2>
+
+<p>CMS</p>
+
+</div>
+
+<ul class="sidebar-menu">
+
+<li>
+<a href="dashboard.html" class="sidebar-link">
+<span>🏠</span>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li class="active">
+<a href="books.html" class="sidebar-link">
+<span>📚</span>
+<span>Books</span>
+</a>
+</li>
+
+<li>
+<span>✍️</span>
+<span>Authors</span>
+</li>
+
+<li>
+<span>🗂️</span>
+<span>Categories</span>
+</li>
+
+<li>
+<span>🛒</span>
+<span>Purchase Platforms</span>
+</li>
+
+<li>
+<span>⚙️</span>
+<span>Website Settings</span>
+</li>
+
+<li id="logoutBtn" style="cursor:pointer;">
+    <span>🚪</span>
+    <span>Logout</span>
+</li>
+
+</ul>
+
+</aside>
+
+<main class="content">
+
+<div class="page-header">
+
+<div>
+
+<h1>Add New Book</h1>
+
+<p>Add a new book to your Pothypanna catalog.</p>
+
+</div>
+
+<a href="books.html" class="primary-btn">
+
+<span class="material-symbols-rounded">
+arrow_back
+</span>
+
+Back to Books
+
+</a>
+
+</div>
+
+<div class="toolbar">
+
+<input
+type="text"
+placeholder="Search books..."
+class="search-input">
+
+<select class="filter-select">
+
+<option>All Categories</option>
+
+</select>
+
+<select class="filter-select">
+
+<option>All Status</option>
+
+<option>Published</option>
+
+<option>Draft</option>
+
+<option>Archived</option>
+
+</select>
+
+</div>
+
+<div class="form-card">
+
+<div class="section-title">
+
+<h2>Basic Information</h2>
+
+<p>Enter the primary details of the book.</p>
+
+</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Book Title *</label>
+
+<input
+type="text"
+placeholder="Enter book title">
+
+</div>
+
+<div class="form-group">
+
+<label>Subtitle</label>
+
+<input
+type="text"
+placeholder="Enter subtitle">
+
+</div>
+
+<div class="form-group full-width">
+
+<label>Description *</label>
+
+<textarea
+rows="6"
+placeholder="Write a short description of the book..."></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>ISBN</label>
+
+<input
+type="text"
+placeholder="978xxxxxxxxxx">
+
+</div>
+
+<div class="form-group">
+
+<label>Language</label>
+
+<select>
+
+<option>English</option>
+
+<option>Hindi</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Pages</label>
+
+<input
+type="number"
+placeholder="150">
+
+</div>
+
+<div class="form-group">
+
+<label>Publication Date</label>
+
+<input type="date">
+
+</div>
+
+</div>
+
+</div>
+</main>
+
+</div>
+  </div>
+
+<div class="form-card">
+
+<div class="section-title">
+
+<h2>Book Cover</h2>
+
+<p>Upload the cover and additional images.</p>
+
+</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Cover Image *</label>
+
+<input
+type="file"
+accept="image/*">
+
+</div>
+
+<div class="form-group">
+
+<label>Gallery Images</label>
+
+<input
+type="file"
+accept="image/*"
+multiple>
+
+</div>
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin.js"></script>
+</body>
+
+</html>
