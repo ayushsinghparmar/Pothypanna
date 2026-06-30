@@ -1809,6 +1809,8 @@ display:flex;
 
 align-items:center;
 
+gap:10px;
+
 padding:15px 18px;
 
 color:#222;
@@ -1821,6 +1823,21 @@ transition:.25s;
 
 }
 
+.admin-dropdown .material-symbols-rounded{
+
+font-size:20px;
+
+color:#444;
+
+transition:.25s;
+
+}
+
+.admin-dropdown a:hover .material-symbols-rounded{
+
+color:#111;
+
+}
 .admin-dropdown a:hover{
 
 background:#FFD54A;
