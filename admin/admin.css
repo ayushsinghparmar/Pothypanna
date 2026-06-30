@@ -1634,3 +1634,60 @@ grid-template-columns:1fr;
 }
 
 }
+/* =========================================
+INPUT WITH ACTION BUTTON
+========================================= */
+
+.input-action{
+
+display:flex;
+
+gap:12px;
+
+align-items:center;
+
+}
+
+.input-action select{
+
+flex:1;
+
+}
+
+.secondary-btn{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+padding:14px 18px;
+
+border:none;
+
+border-radius:14px;
+
+background:#111;
+
+color:#fff;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+white-space:nowrap;
+
+}
+
+.secondary-btn:hover{
+
+background:var(--yellow);
+
+color:#111;
+
+}
