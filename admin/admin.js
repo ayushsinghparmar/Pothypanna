@@ -200,3 +200,16 @@ document.querySelectorAll(".action-card[data-page]").forEach(card => {
     });
 
 });
+/* ==========================================
+DASHBOARD NAVIGATION
+========================================== */
+
+document.querySelectorAll("[data-page]").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        window.location.href = item.dataset.page;
+
+    });
+
+});
