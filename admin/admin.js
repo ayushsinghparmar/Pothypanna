@@ -163,76 +163,49 @@ icon.textContent = "🌙";
 }
 
 }
-/* ==========================
-NOTIFICATION DROPDOWN
-========================== */
-
-const notificationBtn = document.getElementById("notificationBtn");
-const notificationDropdown = document.getElementById("notificationDropdown");
-
-if (notificationBtn && notificationDropdown) {
-
-    notificationBtn.addEventListener("click", (e) => {
-
-        e.stopPropagation();
-
-        notificationDropdown.classList.toggle("show");
-
-    });
-
-    document.addEventListener("click", () => {
-
-        notificationDropdown.classList.remove("show");
-
-    });
-
-}
-/* ==========================
-QUICK ACTIONS
-========================== */
-
-document.querySelectorAll(".action-card[data-page]").forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        window.location.href = card.dataset.page;
-
-    });
-
-});
 /* ==========================================
-DASHBOARD NAVIGATION
+DASHBOARD INTERACTIONS
 ========================================== */
 
-document.querySelectorAll(".action-card[data-page]").forEach(card=>{
-
-card.addEventListener("click",()=>{
-
-window.location.href=card.dataset.page;
-
-});
-
-});
-
-document.querySelectorAll(".stat-card[data-page]").forEach(card=>{
-
-card.addEventListener("click",()=>{
-
-window.location.href=card.dataset.page;
-
-});
-
-});
-/* ==========================================
-ADMIN DROPDOWN
-========================================== */
-
+const notificationBtn=document.getElementById("notificationBtn");
+const notificationDropdown=document.getElementById("notificationDropdown");
 const adminMenuBtn=document.getElementById("adminMenuBtn");
 const adminDropdown=document.getElementById("adminDropdown");
+const dropdownLogout=document.getElementById("dropdownLogout");
+
+/* Quick Actions */
+
+document.querySelectorAll(".action-card[data-page]").forEach(card=>{
+card.onclick=()=>window.location.href=card.dataset.page;
+});
+
+/* Stat Cards */
+
+document.querySelectorAll(".stat-card[data-page]").forEach(card=>{
+card.onclick=()=>window.location.href=card.dataset.page;
+});
+
+/* Notifications */
+
+if(notificationBtn&&notificationDropdown){
+
+notificationBtn.onclick=(e)=>{
+
+e.stopPropagation();
+
+notificationDropdown.classList.toggle("show");
+
+adminDropdown?.classList.remove("show");
+
+};
+
+}
+
+/* Admin Menu */
 
 if(adminMenuBtn&&adminDropdown){
 
-adminMenuBtn.addEventListener("click",(e)=>{
+adminMenuBtn.onclick=(e)=>{
 
 e.stopPropagation();
 
@@ -240,21 +213,25 @@ adminDropdown.classList.toggle("show");
 
 notificationDropdown?.classList.remove("show");
 
-});
-
-document.addEventListener("click",()=>{
-
-adminDropdown.classList.remove("show");
-
-});
+};
 
 }
 
-const dropdownLogout=document.getElementById("dropdownLogout");
+/* Close Dropdowns */
+
+document.onclick=()=>{
+
+notificationDropdown?.classList.remove("show");
+
+adminDropdown?.classList.remove("show");
+
+};
+
+/* Logout */
 
 if(dropdownLogout){
 
-dropdownLogout.addEventListener("click",(e)=>{
+dropdownLogout.onclick=(e)=>{
 
 e.preventDefault();
 
@@ -264,50 +241,19 @@ sessionStorage.clear();
 
 window.location.href="login.html";
 
-});
+};
 
 }
-/* ==========================================
-NOTIFICATION DROPDOWN
-========================================== */
 
-const notificationBtn=document.getElementById("notificationBtn");
-const notificationDropdown=document.getElementById("notificationDropdown");
-
-if(notificationBtn&&notificationDropdown){
-
-notificationBtn.addEventListener("click",(e)=>{
-
-e.stopPropagation();
-
-notificationDropdown.classList.toggle("show");
-
-});
-
-document.addEventListener("click",()=>{
-
-notificationDropdown.classList.remove("show");
-
-});
-
-}
-/* ==========================================
-SIDEBAR ACTIVE LINK
-========================================== */
+/* Sidebar Active */
 
 const currentPage=window.location.pathname.split("/").pop();
 
 document.querySelectorAll(".sidebar-link").forEach(link=>{
 
-const href=link.getAttribute("href");
+if(link.getAttribute("href")===currentPage){
 
-if(href===currentPage){
-
-document.querySelectorAll(".sidebar-menu li").forEach(li=>{
-
-li.classList.remove("active");
-
-});
+document.querySelectorAll(".sidebar-menu li").forEach(li=>li.classList.remove("active"));
 
 link.parentElement.classList.add("active");
 
