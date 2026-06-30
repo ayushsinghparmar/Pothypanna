@@ -187,3 +187,16 @@ if (notificationBtn && notificationDropdown) {
     });
 
 }
+/* ==========================
+QUICK ACTIONS
+========================== */
+
+document.querySelectorAll(".action-card[data-page]").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        window.location.href = card.dataset.page;
+
+    });
+
+});
