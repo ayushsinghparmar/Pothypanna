@@ -204,13 +204,23 @@ document.querySelectorAll(".action-card[data-page]").forEach(card => {
 DASHBOARD NAVIGATION
 ========================================== */
 
-document.querySelectorAll("[data-page]").forEach(item => {
+document.querySelectorAll(".action-card[data-page]").forEach(card=>{
 
-    item.addEventListener("click", () => {
+card.addEventListener("click",()=>{
 
-        window.location.href = item.dataset.page;
+window.location.href=card.dataset.page;
 
-    });
+});
+
+});
+
+document.querySelectorAll(".stat-card[data-page]").forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+window.location.href=card.dataset.page;
+
+});
 
 });
 /* ==========================================
