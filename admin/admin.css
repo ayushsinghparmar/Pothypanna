@@ -1382,3 +1382,40 @@ font-size:13px;
 font-weight:600;
 
 }
+.header-text{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.header-text .wave{
+
+display:inline;
+
+font-size:30px;
+
+vertical-align:middle;
+
+margin-left:6px;
+
+}
+
+.header-text p{
+
+margin-top:4px;
+
+margin-bottom:6px;
+
+}
+
+.header-text small{
+
+font-size:16px;
+
+color:#666;
+
+}
