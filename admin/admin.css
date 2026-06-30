@@ -615,7 +615,7 @@ box-shadow:0 25px 55px rgba(0,0,0,.14);
 
 }
 
-.action-card span{
+.action-card > .action-icon{
 
 display:flex;
 
@@ -627,26 +627,31 @@ width:120px;
 
 height:120px;
 
-margin:auto;
+margin:0 auto 25px;
 
 border-radius:50%;
 
 background:#FFF5CF;
 
-font-size:58px;
-
-margin-bottom:25px;
-
 transition:.45s;
 
 }
 
-.action-card:hover span{
+.action-card > .action-icon.material-symbols-rounded{
 
-transform:scale(1.08) rotate(-8deg);
+font-size:58px;
+
+color:#F4B400;
 
 }
 
+.action-card:hover > .action-icon{
+
+transform:scale(1.08);
+
+background:#FFD54A;
+
+}
 .action-card h3{
 
 font-size:25px;
@@ -942,11 +947,13 @@ color:#F4B400;
 
 }
 
-.action-card .material-symbols-rounded{
+.action-card > .action-icon.material-symbols-rounded{
 
-font-size:52px;
+font-size:58px;
 
 color:#F4B400;
+
+}
 
 }
 
