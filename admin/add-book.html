@@ -312,13 +312,13 @@ placeholder="Optional">
 </div>
 
 </div>
-   <div class="form-card">
+  <div class="form-card">
 
 <div class="section-title">
 
-<h2>Categories, Formats & Selling</h2>
+<h2>Categories, Pricing & Selling</h2>
 
-<p>Configure how this book is categorized, priced and sold.</p>
+<p>Configure book classification, pricing and sales channels.</p>
 
 </div>
 
@@ -329,9 +329,7 @@ placeholder="Optional">
 <label>Category *</label>
 
 <select>
-
 <option>Select Category</option>
-
 </select>
 
 </div>
@@ -341,9 +339,7 @@ placeholder="Optional">
 <label>Genre</label>
 
 <select>
-
 <option>Select Genre</option>
-
 </select>
 
 </div>
@@ -354,29 +350,23 @@ placeholder="Optional">
 
 <input
 type="text"
-placeholder="Reading, Self Help, Fiction, Business">
+placeholder="Fiction, Motivation, Business">
 
 </div>
 
 <div class="form-group">
 
-<label>Book Format *</label>
+<label>Format *</label>
 
 <select>
 
 <option>Paperback</option>
-
 <option>Hardcover</option>
-
-<option>eBook (PDF)</option>
-
-<option>eBook (EPUB)</option>
-
+<option>eBook PDF</option>
+<option>eBook EPUB</option>
 <option>Paperback + eBook</option>
-
 <option>Hardcover + eBook</option>
-
-<option>Paperback + Hardcover + eBook</option>
+<option>All Formats</option>
 
 </select>
 
@@ -384,16 +374,13 @@ placeholder="Reading, Self Help, Fiction, Business">
 
 <div class="form-group">
 
-<label>Book Status *</label>
+<label>Publication Status</label>
 
 <select>
 
 <option>Draft</option>
-
 <option>Published</option>
-
 <option>Scheduled</option>
-
 <option>Archived</option>
 
 </select>
@@ -407,9 +394,7 @@ placeholder="Reading, Self Help, Fiction, Business">
 <select>
 
 <option>Public</option>
-
 <option>Private</option>
-
 <option>Hidden</option>
 
 </select>
@@ -418,12 +403,11 @@ placeholder="Reading, Self Help, Fiction, Business">
 
 <div class="form-group">
 
-<label>Featured Book</label>
+<label>Featured</label>
 
 <select>
 
 <option>No</option>
-
 <option>Yes</option>
 
 </select>
@@ -434,9 +418,7 @@ placeholder="Reading, Self Help, Fiction, Business">
 
 <label>MRP (₹)</label>
 
-<input
-type="number"
-placeholder="499">
+<input type="number" placeholder="499">
 
 </div>
 
@@ -444,9 +426,7 @@ placeholder="499">
 
 <label>Sale Price (₹)</label>
 
-<input
-type="number"
-placeholder="399">
+<input type="number" placeholder="399">
 
 </div>
 
@@ -454,9 +434,15 @@ placeholder="399">
 
 <label>Discount (%)</label>
 
-<input
-type="number"
-placeholder="20">
+<input type="number" placeholder="20">
+
+</div>
+
+<div class="form-group">
+
+<label>GST (%)</label>
+
+<input type="number" placeholder="5">
 
 </div>
 
@@ -467,7 +453,6 @@ placeholder="20">
 <select>
 
 <option>Yes</option>
-
 <option>No</option>
 
 </select>
@@ -476,58 +461,49 @@ placeholder="20">
 
 <div class="form-group">
 
-<label>Amazon Link</label>
+<label>Amazon</label>
 
-<input
-type="url"
-placeholder="https://">
+<input type="url" placeholder="Amazon Product URL">
 
 </div>
 
 <div class="form-group">
 
-<label>Kindle Link</label>
+<label>Kindle</label>
 
-<input
-type="url"
-placeholder="https://">
+<input type="url" placeholder="Kindle URL">
 
 </div>
 
 <div class="form-group">
 
-<label>Pothi Link</label>
+<label>Pothi</label>
 
-<input
-type="url"
-placeholder="https://">
+<input type="url" placeholder="Pothi URL">
 
 </div>
 
 <div class="form-group">
 
-<label>Notion Press Link</label>
+<label>Notion Press</label>
 
-<input
-type="url"
-placeholder="https://">
+<input type="url" placeholder="Notion Press URL">
 
 </div>
 
 <div class="form-group full-width">
 
-<label>Other Purchase Link</label>
+<label>Additional Purchase Links</label>
 
-<input
-type="url"
-placeholder="https://">
-
-</div>
+<textarea
+rows="4"
+placeholder="One link per line"></textarea>
 
 </div>
 
 </div>
-</main>
+
+</div></main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="admin.js"></script>
