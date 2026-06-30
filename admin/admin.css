@@ -1327,3 +1327,36 @@ icon.textContent = "🌙";
 }
 
 }
+/* ===== QUICK ACTION ICONS ===== */
+
+.action-icon{
+
+font-size:58px !important;
+
+color:#F4B400;
+
+background:#FFF4CC;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:0 auto 24px;
+
+}
+
+.action-arrow .material-symbols-rounded{
+
+font-size:26px;
+
+color:#111;
+
+}
