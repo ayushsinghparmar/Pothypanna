@@ -331,7 +331,9 @@ language,
 
 pages,
 
-publication_date: publicationDate || null
+publication_year: publicationDate
+    ? new Date(publicationDate).getFullYear()
+    : null
 
 }]);
 
