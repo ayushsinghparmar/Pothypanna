@@ -275,3 +275,18 @@ location.reload();
 });
 
 }
+/* ==========================================
+IMPORT BOOKS
+========================================== */
+
+const importBooks=document.getElementById("importBooks");
+
+if(importBooks){
+
+importBooks.addEventListener("click",()=>{
+
+alert("Import Books feature will be available after Supabase integration.");
+
+});
+
+}
