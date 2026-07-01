@@ -2151,4 +2151,60 @@ transform:translateY(0);
 }
 
 }
+.admin-box{
 
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+padding:10px 16px;
+
+background:#fff;
+
+border-radius:18px;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.admin-box > div:nth-child(2){
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+justify-content:center;
+
+line-height:1.15;
+
+}
+
+.admin-box > div:nth-child(2) strong{
+
+display:block;
+
+margin:0;
+
+font-size:16px;
+
+font-weight:700;
+
+}
+
+.admin-box > div:nth-child(2) small{
+
+display:block;
+
+margin-top:3px;
+
+font-size:13px;
+
+color:#777;
+
+}
