@@ -290,3 +290,63 @@ alert("Import Books feature will be available after Supabase integration.");
 });
 
 }
+/* ==========================================
+ADD BOOK TO SUPABASE
+========================================== */
+
+const addBookForm = document.getElementById("addBookForm");
+
+if (addBookForm) {
+
+addBookForm.addEventListener("submit", async (e) => {
+
+e.preventDefault();
+
+const title = document.getElementById("bookTitle").value.trim();
+
+const description = document.getElementById("bookDescription").value.trim();
+
+const isbn = document.getElementById("bookISBN").value.trim();
+
+const language = document.getElementById("bookLanguage").value;
+
+const pages = Number(document.getElementById("bookPages").value) || null;
+
+const publicationDate =
+document.getElementById("publicationDate").value;
+
+const { error } = await supabaseClient
+
+.from("books")
+
+.insert([{
+
+title,
+
+description,
+
+isbn,
+
+language,
+
+pages,
+
+publication_date: publicationDate || null
+
+}]);
+
+if(error){
+
+alert(error.message);
+
+return;
+
+}
+
+alert("Book added successfully!");
+
+addBookForm.reset();
+
+});
+
+}
