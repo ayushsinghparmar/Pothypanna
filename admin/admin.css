@@ -2151,24 +2151,4 @@ transform:translateY(0);
 }
 
 }
-.admin-text{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    line-height:1.2;
-}
 
-.admin-text strong{
-    display:block;
-    font-size:22px;
-    font-weight:700;
-    color:#111;
-    margin:0;
-}
-
-.admin-text small{
-    display:block;
-    font-size:14px;
-    color:#6b7280;
-    margin-top:4px;
-}
