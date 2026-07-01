@@ -399,25 +399,74 @@ renderBooks(data);
 
 }
 
-booksTableBody.innerHTML += `
+/* ==========================================
+RENDER BOOKS
+========================================== */
+
+function renderBooks(books){
+
+const booksTableBody=document.getElementById("booksTableBody");
+
+booksTableBody.innerHTML="";
+
+document.getElementById("totalBooks").textContent=books.length;
+
+document.getElementById("booksCount").textContent=`${books.length} Books`;
+
+if(books.length===0){
+
+booksTableBody.innerHTML=`
+
+<tr>
+
+<td colspan="9" class="empty-table">
+
+<div class="empty-books">
+
+<span class="material-symbols-rounded empty-icon">
+
+search_off
+
+</span>
+
+<h3>No Results Found</h3>
+
+<p>No books match your search.</p>
+
+</div>
+
+</td>
+
+</tr>
+
+`;
+
+return;
+
+}
+
+books.forEach(book=>{
+
+booksTableBody.innerHTML+=`
 
 <tr>
 
 <td>
-<img
-src="${book.cover_url || '../logo.png'}"
+
+<img src="${book.cover_url || '../logo.png'}"
 style="width:55px;height:80px;object-fit:cover;border-radius:8px;">
+
 </td>
 
-<td>${book.title}</td>
+<td>${book.title || "-"}</td>
 
-<td>-</td>
+<td>${book.author_name || "-"}</td>
 
-<td>-</td>
+<td>${book.book_type || "-"}</td>
 
-<td>Pothypanna</td>
+<td>${book.platform_name || "Pothypanna"}</td>
 
-<td>-</td>
+<td>${book.price ?? "-"}</td>
 
 <td>-</td>
 
@@ -432,6 +481,54 @@ style="width:55px;height:80px;object-fit:cover;border-radius:8px;">
 </tr>
 
 `;
+
+});
+
+}
+
+/* ==========================================
+LIVE SEARCH
+========================================== */
+
+const searchInput=document.getElementById("bookSearch");
+
+if(searchInput){
+
+searchInput.addEventListener("input",()=>{
+
+const keyword=searchInput.value.trim().toLowerCase();
+
+if(keyword===""){
+
+renderBooks(allBooks);
+
+return;
+
+}
+
+const filtered=allBooks.filter(book=>{
+
+return (
+
+(book.title || "").toLowerCase().includes(keyword) ||
+
+(book.description || "").toLowerCase().includes(keyword) ||
+
+(book.language || "").toLowerCase().includes(keyword) ||
+
+(book.isbn || "").toLowerCase().includes(keyword) ||
+
+(book.author_name || "").toLowerCase().includes(keyword) ||
+
+(book.category_name || "").toLowerCase().includes(keyword) ||
+
+(book.platform_name || "").toLowerCase().includes(keyword)
+
+);
+
+});
+
+renderBooks(filtered);
 
 });
 
