@@ -260,3 +260,18 @@ link.parentElement.classList.add("active");
 }
 
 });
+/* ==========================================
+BOOKS PAGE
+========================================== */
+
+const refreshBooks=document.getElementById("refreshBooks");
+
+if(refreshBooks){
+
+refreshBooks.addEventListener("click",()=>{
+
+location.reload();
+
+});
+
+}
