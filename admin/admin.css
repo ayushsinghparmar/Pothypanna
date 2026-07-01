@@ -1887,13 +1887,15 @@ color:#111;
 
 display:flex;
 
-align-items:center;
-
 justify-content:space-between;
+
+align-items:center;
 
 gap:20px;
 
-margin:26px 0 32px;
+margin-bottom:28px;
+
+flex-wrap:wrap;
 
 }
 
@@ -1903,31 +1905,49 @@ display:flex;
 
 align-items:center;
 
-gap:16px;
+justify-content:flex-start;
+
+gap:14px;
 
 flex:1;
+
+flex-wrap:nowrap;
+
+overflow-x:auto;
+
+padding-bottom:4px;
+
+scrollbar-width:none;
+
+}
+
+.toolbar-left::-webkit-scrollbar{
+
+display:none;
 
 }
 
 .toolbar-left .search-box{
 
-width:430px;
+flex:1;
 
-min-width:430px;
+min-width:420px;
 
-max-width:430px;
-
-flex:none;
+max-width:650px;
 
 }
 
 .toolbar-left .filter-select{
 
-width:165px;
+flex-shrink:0;
 
-min-width:165px;
+min-width:160px;
 
-flex:none;
+}
+
+.toolbar-left .secondary-btn{
+
+flex-shrink:0;
 
 }
 
@@ -1937,12 +1957,10 @@ display:flex;
 
 align-items:center;
 
-justify-content:flex-end;
-
-margin-left:auto;
+gap:12px;
 
 }
-.search-box{
+   .search-box{
 
 display:flex;
 
