@@ -81,36 +81,118 @@
 
 <main class="content">
 
-<div class="page-header">
+<div class="dashboard-header">
 
-<div>
+<div class="header-left">
+
+<div class="welcome-badge">
+
+📚
+
+</div>
+
+<div class="header-text">
 
 <h1>Books Management</h1>
 
-<p>Manage every book available on Pothypanna.</p>
+<p>Manage your complete bookstore from one place.</p>
+
+<small>
+
+Create, edit, publish and organize books across every platform.
+
+</small>
 
 </div>
 
-<a href="add-book.html" class="primary-btn">
+</div>
 
-<span class="material-symbols-rounded">add</span>
+<div class="header-right">
+
+<button
+class="secondary-btn"
+type="button">
+
+<span class="material-symbols-rounded">
+
+refresh
+
+</span>
+
+Refresh
+
+</button>
+
+<button
+class="primary-btn"
+type="button"
+onclick="window.location.href='add-book.html'">
+
+<span class="material-symbols-rounded">
+
+add
+
+</span>
 
 Add Book
 
-</a>
+</button>
 
 </div>
 
+</div>
 <div class="toolbar">
+
+<div class="toolbar-left">
+
+<div class="search-box">
+
+<span class="material-symbols-rounded">
+
+search
+
+</span>
 
 <input
 type="text"
-placeholder="Search books..."
+placeholder="Search by title, author, ISBN..."
 class="search-input">
+
+</div>
 
 <select class="filter-select">
 
 <option>All Categories</option>
+
+</select>
+
+<select class="filter-select">
+
+<option>All Platforms</option>
+
+<option>Pothypanna</option>
+
+<option>Amazon</option>
+
+<option>Kindle</option>
+
+<option>Pothi</option>
+
+<option>Notion Press</option>
+
+</select>
+
+<select class="filter-select">
+
+<option>All Types</option>
+
+<option>Paperback</option>
+
+<option>Hardcover</option>
+
+<option>eBook</option>
+
+<option>Audiobook</option>
 
 </select>
 
@@ -122,13 +204,198 @@ class="search-input">
 
 <option>Draft</option>
 
-<option>Archived</option>
+<option>Hidden</option>
 
 </select>
 
 </div>
 
+<div class="toolbar-right">
+
+<button class="secondary-btn" type="button">
+
+<span class="material-symbols-rounded">
+
+filter_alt
+
+</span>
+
+Advanced Filters
+
+</button>
+
+</div>
+
+</div>
+    <div class="stats-grid">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<span class="material-symbols-rounded">
+
+menu_book
+
+</span>
+
+</div>
+
+<div class="stat-info">
+
+<p>Total Books</p>
+
+<h2>0</h2>
+
+<span class="stat-badge">
+
+Books
+
+</span>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<span class="material-symbols-rounded">
+
+auto_stories
+
+</span>
+
+</div>
+
+<div class="stat-info">
+
+<p>Paperback</p>
+
+<h2>0</h2>
+
+<span class="stat-badge">
+
+POD Ready
+
+</span>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<span class="material-symbols-rounded">
+
+tablet_mac
+
+</span>
+
+</div>
+
+<div class="stat-info">
+
+<p>eBooks</p>
+
+<h2>0</h2>
+
+<span class="stat-badge">
+
+Digital
+
+</span>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<span class="material-symbols-rounded">
+
+payments
+
+</span>
+
+</div>
+
+<div class="stat-info">
+
+<p>Revenue</p>
+
+<h2>₹0</h2>
+
+<span class="stat-badge">
+
+This Month
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
 <div class="table-container">
+
+<div class="table-toolbar">
+
+<div class="table-left">
+
+<h2>Books Library</h2>
+
+<p>
+
+Manage paperback books, eBooks and external platform listings from one place.
+
+</p>
+
+<span>0 Books</span>
+
+</div>
+
+<div class="table-right">
+
+<button class="secondary-btn" type="button">
+
+<span class="material-symbols-rounded">
+delete
+</span>
+
+Delete
+
+</button>
+
+<button class="secondary-btn" type="button">
+
+<span class="material-symbols-rounded">
+visibility_off
+</span>
+
+Hide
+
+</button>
+
+<button class="secondary-btn" type="button">
+
+<span class="material-symbols-rounded">
+publish
+</span>
+
+Publish
+
+</button>
+
+</div>
+
+</div>
 
 <table class="books-table">
 
@@ -136,26 +403,27 @@ class="search-input">
 
 <tr>
 
-<th>Cover</th>
+<th style="width:90px;">Cover</th>
 
-<th>Title</th>
+<th>Book</th>
 
 <th>Author</th>
 
-<th>Category</th>
+<th>Type</th>
 
 <th>Platform</th>
 
 <th>Price</th>
 
+<th>Discount</th>
+
 <th>Status</th>
 
-<th>Actions</th>
+<th style="width:220px;">Actions</th>
 
 </tr>
 
 </thead>
-
 <tbody>
 
 <tr>
@@ -165,32 +433,59 @@ class="search-input">
 <div class="empty-books">
 
 <span class="material-symbols-rounded empty-icon">
-menu_book
+
+library_books
+
 </span>
 
-<h3>No Books Added Yet</h3>
+<h3>Your Book Library is Empty</h3>
 
 <p>
-Start building your bookstore by adding your first book.
-You can sell books directly on Pothypanna or link external platforms like Amazon, Kindle, Pothi and more.
+
+Start building your bookstore today.
+
+Add paperback books, eBooks, audiobooks or external purchase links from Amazon, Kindle, Pothi, Notion Press and more.
+
 </p>
 
-<button class="primary-btn">
+<div class="empty-actions">
+
+<button
+class="primary-btn"
+type="button"
+onclick="window.location.href='add-book.html'">
 
 <span class="material-symbols-rounded">
+
 add
+
 </span>
 
-Add Your First Book
+Add First Book
 
 </button>
+
+<button
+class="secondary-btn"
+type="button">
+
+<span class="material-symbols-rounded">
+
+upload_file
+
+</span>
+
+Import Books
+
+</button>
+
+</div>
 
 </div>
 
 </td>
 
 </tr>
-
 </tbody>
 
 </table>
