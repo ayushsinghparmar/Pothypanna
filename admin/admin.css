@@ -1235,11 +1235,29 @@ color:#777;
 
 .header-right{
 
+display:flex;
+
+align-items:center;
+
+justify-content:flex-end;
+
+gap:16px;
+
+margin-left:auto;
+
+}
+
 .icon-btn{
 
-width:56px;
+width:54px;
 
-height:56px;
+height:54px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
 
 border:none;
 
@@ -1247,17 +1265,11 @@ border-radius:50%;
 
 background:#FFF4CC;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
 cursor:pointer;
 
-transition:all .3s ease;
-
 box-shadow:0 8px 20px rgba(255,213,74,.15);
+
+transition:.3s;
 
 }
 
@@ -1265,77 +1277,15 @@ box-shadow:0 8px 20px rgba(255,213,74,.15);
 
 background:#FFD54A;
 
-transform:translateY(-4px) rotate(10deg);
-
-box-shadow:0 14px 28px rgba(255,213,74,.45);
+transform:translateY(-3px);
 
 }
 
 .icon-btn .material-symbols-rounded{
 
-font-size:28px;
+font-size:26px;
 
 color:#111;
-
-transition:.3s;
-
-}
-
-.admin-box{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-padding-left:24px;
-
-border-left:1px solid #ececec;
-
-}
-
-.avatar{
-
-width:52px;
-
-height:52px;
-
-border-radius:50%;
-
-background:#FFD54A;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:22px;
-
-font-weight:700;
-
-color:#111;
-
-}
-
-.admin-box strong{
-
-display:block;
-
-font-size:24px;
-
-margin-bottom:2px;
-
-}
-
-.admin-box small{
-
-display:block;
-
-font-size:15px;
-
-color:#666;
 
 }
 /* ===== QUICK ACTION ICONS ===== */
