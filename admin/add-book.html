@@ -115,6 +115,8 @@ Fields marked with <strong>*</strong> are required.
 </p>
 
 </div>
+<form id="addBookForm">
+
 <div class="form-card">
 
 <div class="section-title">
@@ -133,7 +135,9 @@ Fields marked with <strong>*</strong> are required.
 
 <input
 type="text"
-placeholder="Enter book title">
+id="bookTitle"
+placeholder="Enter book title"
+required>
 
 </div>
 
@@ -152,8 +156,10 @@ placeholder="Enter subtitle">
 <label>Description *</label>
 
 <textarea
+id="bookDescription"
 rows="6"
-placeholder="Write a short description of the book..."></textarea>
+placeholder="Write a short description of the book..."
+required></textarea>
 
 </div>
 
@@ -163,6 +169,7 @@ placeholder="Write a short description of the book..."></textarea>
 
 <input
 type="text"
+id="bookISBN"
 placeholder="978xxxxxxxxxx">
 
 </div>
@@ -171,7 +178,7 @@ placeholder="978xxxxxxxxxx">
 
 <label>Language</label>
 
-<select>
+<select id="bookLanguage">
 
 <option>English</option>
 
@@ -189,6 +196,7 @@ placeholder="978xxxxxxxxxx">
 
 <input
 type="number"
+id="bookPages"
 placeholder="150">
 
 </div>
@@ -197,7 +205,9 @@ placeholder="150">
 
 <label>Publication Date</label>
 
-<input type="date">
+<input
+type="date"
+id="publicationDate">
 
 </div>
 
@@ -591,6 +601,31 @@ placeholder="Visible only to admin"></textarea>
 </div>
 
 </div>
+<div style="display:flex;justify-content:flex-end;gap:16px;margin:32px 0;">
+
+<button
+type="reset"
+class="secondary-btn">
+
+Reset
+
+</button>
+
+<button
+type="submit"
+id="saveBookBtn"
+class="primary-btn">
+
+<span class="material-symbols-rounded">save</span>
+
+Save Book
+
+</button>
+
+</div>
+
+</form>
+
 </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
