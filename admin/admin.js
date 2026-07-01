@@ -352,3 +352,85 @@ addBookForm.reset();
 });
 
 }
+/* ==========================================
+LOAD BOOKS FROM SUPABASE
+========================================== */
+
+const booksTableBody = document.getElementById("booksTableBody");
+
+if (booksTableBody) {
+
+loadBooks();
+
+}
+
+async function loadBooks() {
+
+const { data, error } = await supabaseClient
+
+.from("books")
+
+.select("*")
+
+.order("created_at", { ascending: false });
+
+if (error) {
+
+console.error(error);
+
+return;
+
+}
+
+document.getElementById("totalBooks").textContent = data.length;
+
+document.getElementById("booksCount").textContent =
+`${data.length} Books`;
+
+if (data.length === 0) {
+
+return;
+
+}
+
+booksTableBody.innerHTML = "";
+
+data.forEach(book => {
+
+booksTableBody.innerHTML += `
+
+<tr>
+
+<td>
+<img
+src="${book.cover_url || '../logo.png'}"
+style="width:55px;height:80px;object-fit:cover;border-radius:8px;">
+</td>
+
+<td>${book.title}</td>
+
+<td>-</td>
+
+<td>-</td>
+
+<td>Pothypanna</td>
+
+<td>-</td>
+
+<td>-</td>
+
+<td>${book.status || "Published"}</td>
+
+<td>
+
+<button class="secondary-btn">Edit</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+}
