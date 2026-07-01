@@ -6,7 +6,7 @@ const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_ANON_KEY
 );
-
+let allBooks = [];
 /* -----------------------------
    AUTO LOGIN
 ------------------------------*/
@@ -382,6 +382,8 @@ return;
 
 }
 
+allBooks = data;
+
 document.getElementById("totalBooks").textContent = data.length;
 
 document.getElementById("booksCount").textContent =
@@ -393,9 +395,9 @@ return;
 
 }
 
-booksTableBody.innerHTML = "";
+renderBooks(data);
 
-data.forEach(book => {
+}
 
 booksTableBody.innerHTML += `
 
