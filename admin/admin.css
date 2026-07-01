@@ -1855,11 +1855,13 @@ display:flex;
 
 align-items:center;
 
-gap:12px;
+justify-content:space-between;
+
+gap:16px;
 
 flex:1;
 
-min-width:0;
+width:100%;
 
 }
 
@@ -1881,24 +1883,27 @@ display:flex;
 
 align-items:center;
 
-width:300px;
+flex:1;
+
+max-width:420px;
+
+min-width:320px;
 
 height:52px;
 
-padding:0 16px;
+padding:0 18px;
 
 background:#fff;
 
 border:1px solid #E7E7E7;
 
-border-radius:16px;
+border-radius:999px;
 
 box-shadow:0 6px 16px rgba(0,0,0,.05);
 
-flex-shrink:0;
+overflow:hidden;
 
 }
-
 .search-box .material-symbols-rounded{
 
 font-size:20px;
