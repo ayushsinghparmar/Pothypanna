@@ -312,6 +312,12 @@ const language = document.getElementById("bookLanguage").value;
 
 const pages = Number(document.getElementById("bookPages").value) || null;
 
+const bookType =
+document.getElementById("bookType").value;
+
+const price =
+Number(document.getElementById("bookPrice").value) || 0;
+
 const publicationDate =
 document.getElementById("publicationDate").value;
 
@@ -331,9 +337,13 @@ language,
 
 pages,
 
+book_type: bookType,
+
+price: price,
+
 publication_year: publicationDate
-    ? new Date(publicationDate).getFullYear()
-    : null
+? new Date(publicationDate).getFullYear()
+: null
 
 }]);
 
