@@ -290,38 +290,3 @@ alert("Import Books feature will be available after Supabase integration.");
 });
 
 }
-/* ==========================================
-BOOK SEARCH
-========================================== */
-
-const bookSearch = document.getElementById("bookSearch");
-
-if (bookSearch) {
-
-bookSearch.addEventListener("input", function () {
-
-const value = this.value.trim().toLowerCase();
-
-const rows = document.querySelectorAll(".books-table tbody tr");
-
-rows.forEach(row => {
-
-if (row.querySelector(".empty-books")) return;
-
-const text = row.textContent.toLowerCase();
-
-if (text.includes(value)) {
-
-row.style.display = "";
-
-} else {
-
-row.style.display = "none";
-
-}
-
-});
-
-});
-
-}
